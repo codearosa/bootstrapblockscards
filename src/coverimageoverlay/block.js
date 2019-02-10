@@ -11,14 +11,13 @@ const { __ } = wp.i18n;
 
 const COVERIMAGEOVERLAY = [
   ['core/cover', { className: 'card-img m-0' }],
-  ['bootstrapblocks/div', {className: 'card-img-overlay semitransparent'},[
+  ['bootstrapblocks/div', {className: 'card-img-overlay semitransparent'}],
     ['bootstrapblocks/div', {className: 'card-img-overlay h-50 m-auto text-center'},[
       ['core/heading', { className: 'card-title' }],
       ['core/heading', { className: 'card-sub-title text-muted' }],
       ['core/paragraph', { placeholder: 'Write your card text' , className: 'card-text' }],
       ['core/paragraph', { placeholder: 'Link me' , className: 'btn btn-primary text-white' }],
   ]]
-    ]]
                           ];
 
 
@@ -34,7 +33,7 @@ registerBlockType( 'bootstrapblockscards/coveroverlay', {
 
     edit( { attributes, className, setAttributes } ) {
         return (
-            <div className={ 'card' + ' ' + className }>
+            <div className={ 'mycard' + ' ' + className }>
                 <InnerBlocks template={COVERIMAGEOVERLAY} />
             </div>
         );
